@@ -1,50 +1,26 @@
 name: Token Diff Generate
 
-# Fork PRs get a read-only GITHUB_TOKEN on pull_request events no matter what
-# `permissions:` says, so report generation (here) and comment posting
-# (token-diff-pr-comment-post.yml, triggered by workflow_run) are split into
-# separate workflows. The artifact is the only thing that crosses the boundary.
+# Testbed producer: on a pull_request the workflow file from the PR head is used,
+# so the PR author controls every byte of the uploaded token-diff-report artifact.
+# This is the fork-PR threat model, reproduced on a branch in this copy.
 on:
   pull_request:
     types: [opened, synchronize, reopened]
-
-concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
 
 permissions:
   contents: read
 
 jobs:
   token-diff-generate:
-    runs-on: ubuntu-latest
+    # Self-hosted: GitHub-hosted minutes unavailable for this private copy.
+    runs-on: [self-hosted, linux, x64]
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      - name: Generate token diff report
-        id: diff
-        uses: ./.github/actions/generate-diff
-        with:
-          tool: diff-generator
-          base-ref: ${{ github.base_ref }}
-          local-path: packages/tokens/src
-          repository: ${{ github.repository }}
-          format: markdown
-          output-file: /tmp/token-diff.md
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-
       - name: Save report for comment workflow
         run: |
           mkdir -p /tmp/artifact
           echo "${{ github.event.pull_request.number }}" > /tmp/artifact/pr-number.txt
-          echo "${{ steps.diff.outputs.diff-generated }}" > /tmp/artifact/diff-generated.txt
-          printf '%s\n' "${{ steps.diff.outputs.diff-content }}" > /tmp/artifact/diff-content.txt
-          if [ -f /tmp/token-diff.md ]; then
-            cp /tmp/token-diff.md /tmp/artifact/diff-report.md
-          fi
+          echo "true" > /tmp/artifact/diff-generated.txt
+          printf '%s\n' 'IyMgVG9rZW4gQ2hhbmdlcyBSZXBvcnQKCkFydGlmYWN0IHByb2R1Y2VkIGJ5IGEgUFItY29udHJvbGxlZCBwcm9kdWNlciB3b3JrZmxvdyAoZm9yay1lcXVpdmFsZW50KS4K' > /tmp/artifact/diff-content.txt
 
       - name: Upload diff artifact
         uses: actions/upload-artifact@v4
