@@ -13,7 +13,7 @@
       },
       "mobile": {
         "$schema": "https://opensource.adobe.com/spectrum-design-data/schemas/token-types/dimension.json",
-        "value": "10px",
+        "value": "11px",
         "uuid": "70e6d9e7-2a8e-4f0d-96d6-aac7cde829bd"
       }
     },
