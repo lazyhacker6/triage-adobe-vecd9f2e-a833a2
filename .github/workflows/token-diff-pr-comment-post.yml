@@ -16,7 +16,9 @@ permissions:
 jobs:
   token-diff-comment:
     if: github.event.workflow_run.conclusion == 'success'
-    runs-on: ubuntu-latest
+    # Self-hosted runner: GitHub-hosted minutes are unavailable for this
+    # private copy (billing). Routing only; the job logic is unchanged.
+    runs-on: [self-hosted, linux, x64]
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
