@@ -1,0 +1,139 @@
+{
+  "$schema": "https://opensource.adobe.com/spectrum-design-data/schemas/v0/component-changelog.schema.json",
+  "specVersion": "1.0.0-draft",
+  "component": "swatch",
+  "baseline": {"release":"2.1.0","version":"1.0.0","commit":"4033f09de6696d4f61d1da89d42129a941dbd806"},
+  "releases": [
+    {
+      "release": "2.7.0",
+      "version": "1.0.1",
+      "bump": "patch",
+      "date": "2026-09-03",
+      "commit": "5e22a7a18cd1a4f2a5957cba9cafa66bef73ed63",
+      "commits": [
+        {
+          "commit": "5e22a7a18cd1a4f2a5957cba9cafa66bef73ed63",
+          "date": "2026-09-03",
+          "source": {"type":"pr","repo":"adobe/spectrum-design-data","number":1394,"title":"fix(design-data): re-point CTR refs off deprecated tokens, add guard rail","url":"https://github.com/adobe/spectrum-design-data/pull/1394"},
+          "entries": [
+            {"id":"5e22a7a1-0","kind":"relationship","change":"updated","class":"visual","bump":"patch","indirect":false,"contexts":["Focus ring"],"scope":{"property":"gap","options":null},"record":"gap#Focus ring","name":"gap","fields":[{"path":"$ref","before":"693651ef-71c7-4096-91a5-1c84cb861021","after":"fb035d45-e63b-4cd4-b220-675a52e99399"}]}
+          ]
+        }
+      ]
+    },
+    {
+      "release": "3.0.0",
+      "version": "1.0.2",
+      "bump": "patch",
+      "date": "2026-09-08",
+      "commit": "569b7abcb96ebeaa549c1c1a1cb44975b30bff59",
+      "commits": [
+        {
+          "commit": "6005339a0678226eee3e827fd5bbfa793f5bccc7",
+          "date": "2026-09-08",
+          "source": {"type":"pr","repo":"adobe/spectrum-design-data","number":1428,"title":"feat(tokens)!: add conceptId as canonical concept-level UUID, retire set_uuid","url":"https://github.com/adobe/spectrum-design-data/pull/1428"},
+          "entries": [],
+          "metadata": {"count":34,"fields":["conceptId","set_uuid"]}
+        }
+      ]
+    },
+    {
+      "release": "3.4.0",
+      "version": "1.0.3",
+      "bump": "patch",
+      "date": "2026-10-01",
+      "commit": "b07a196c22db3f99c93307e6240f196b72535d13",
+      "commits": [
+        {
+          "commit": "ec3376fa833f2c31dd0b2340590134b2747b00c4",
+          "date": "2026-10-01",
+          "source": {"type":"pr","repo":"adobe/spectrum-design-data","number":1524,"title":"feat(design-data): promote public Spectrum Hub guidance to main","url":"https://github.com/adobe/spectrum-design-data/pull/1524"},
+          "entries": [
+            {"id":"ec3376fa-0","kind":"document-block","change":"updated","class":"documentation","bump":"patch","indirect":false,"contexts":[],"record":"swatch/documentBlocks/0","name":"guideline: Keyboard focus.\n\nA swatch can be navigated using","fields":[{"path":"content","before":"The preview shows the sample of the fill that the swatch represents. This property can be a color, gradient, texture, or material. The exact format this property takes will depend on implementation. Some examples of the format include color values, image, canvas, and gradient.","after":"Keyboard focus.\n\nA swatch can be navigated using a keyboard. The keyboard focus state adds a blue ring to the swatch in focus."}]},
+            {"id":"ec3376fa-1","kind":"document-block","change":"updated","class":"documentation","bump":"patch","indirect":false,"contexts":[],"record":"swatch/documentBlocks/1","name":"guideline: Mixed value.\n\nWhen a swatch represents multiple ","fields":[{"path":"content","before":"Swatches come in four different sizes: extra-small, small, medium, and large. The medium size is the default and most frequently used option. Use the other sizes sparingly; they should be used to create a hierarchy of importance within the page.","after":"Mixed value.\n\nWhen a swatch represents multiple values that are not identical, the preview shows a gray fill and a dash UI icon."}]},
+            {"id":"ec3376fa-2","kind":"document-block","change":"updated","class":"documentation","bump":"patch","indirect":false,"contexts":[],"record":"swatch/documentBlocks/2","name":"guideline: Hide unavailable swatches when possible.\n\nEven t","fields":[{"path":"content","before":"By default, swatches have partial rounding. There are 3 options for a swatch’s rounding: none, partial rounding, and full rounding.","after":"Hide unavailable swatches when possible.\n\nEven though swatches can have a disabled state, hiding unavailable swatches reduces visual clutter and eases cognitive load. Only show disabled swatches if hiding them would cause confusion to your users."}]},
+            {"id":"ec3376fa-3","kind":"document-block","change":"updated","class":"documentation","bump":"patch","indirect":false,"contexts":[],"record":"swatch/documentBlocks/3","name":"guideline: Keyboard interactions.\n\nKey Interaction Tab Move","fields":[{"path":"content","before":"A swatch can have a selected state to allow for selection. This is often used in a swatch group.","after":"Keyboard interactions.\n\nKey Interaction Tab Moves focus onto or off of the swatch group. Focus moves to the first swatch in the group. Space or Enter Triggers an action or selects the swatch when selection is enabled. The focus remains on the swatch, unless the swatch opens or closes the current container. In this case, the focus moves to the target or back to the caller."}]},
+            {"id":"ec3376fa-4","kind":"document-block","change":"updated","class":"documentation","bump":"patch","indirect":false,"contexts":[],"record":"swatch/documentBlocks/4","name":"guideline: Cursor guidelines.\n\nCursor Description Pointer U","fields":[{"path":"content","before":"A swatch in a disabled state shows that the swatch exists, but is not available in that circumstance. This state can be used to maintain layout continuity and to communicate that a swatch may become available later. Disabled swatches should be used with caution.","after":"Cursor guidelines.\n\nCursor Description Pointer Use the pointer cursor for all interactive elements in every state."}]},
+            {"id":"ec3376fa-5","kind":"document-block","change":"updated","class":"documentation","bump":"patch","indirect":false,"contexts":[],"record":"swatch/documentBlocks/5","name":"guideline: WCAG 2.2 compliance.\n\nAny criterion not mention ","fields":[{"path":"content","before":"A swatch can be navigated using a keyboard. The keyboard focus state adds a blue ring to the swatch in focus.","after":"WCAG 2.2 compliance.\n\nAny criterion not mention in the below table are not applicable to this component or are resolved with underlying requirements, engineering, and styles of the entire system. 1. Perceivable Requirement Criterion Level Compliance Non-text content 1.1.1 A Non‑text elements must provide a text alternative that communicates the control’s purpose. All controls, especially icon‑only controls, need an accessible name (for example, via a title, aria‑label, or associated text) so screen readers can announce their function. Info and relationships, Identify purpose 1.3.1, 1.3.6 A, AAA Swatch groups should be understandable by assistive technologies like screen readers. This means the proper semantic HTML or ARIA role should be utilized, so the grouping relationship between swatches and the selected state are programmatically conveyed. Use of color 1.4.1 A This criterion requires that color not be the only method of communicating information. In swatches, the color itself is the content being presented, not a cue that conveys additional meaning. 2. Operable Requirement Criterion Level Compliance Keyboard 2.1.1, 2.1.3 A, AAA All functionality of the component is operable through a keyboard without specific timing for keystrokes. Keyboard traps 2.1.2 A Focus can be moved away from the component using only a keyboard. Seizures and physical reactions 2.3.1, 2.3.2, 2.3.3 A, AAA, AAA There is no flashing content or unnecessary motion or animation in this component. Focus order 2.4.3 A Navigation sequences receive focus in an order that preserves meaning and operability. Focus visible 2.4.7 AA Keyboard states use an indicator that is visible with at least 3:1 contrast."}]},
+            {"id":"ec3376fa-6","kind":"document-block","change":"removed","class":"documentation","bump":"patch","indirect":false,"contexts":[],"record":"swatch/documentBlocks/6","name":"guideline: Even though swatches can have a disabled state, ","fields":[],"before":{"type":"guideline","content":"Even though swatches can have a disabled state, hiding unavailable swatches reduces visual clutter and eases cognitive load. Only show disabled swatches if hiding them would cause confusion to your users."}}
+          ]
+        }
+      ]
+    },
+    {
+      "release": "3.6.0",
+      "version": "1.0.4",
+      "bump": "patch",
+      "date": "2026-10-16",
+      "commit": "15f371e50e2ce95a624a93152e408e1bbe8844dc",
+      "commits": [
+        {
+          "commit": "15f371e50e2ce95a624a93152e408e1bbe8844dc",
+          "date": "2026-10-16",
+          "source": {"type":"pr","repo":"adobe/spectrum-design-data","number":1382,"title":"feat(tokens): add static + theme-aware transparency tokens, deprecate legacy","url":"https://github.com/adobe/spectrum-design-data/pull/1382"},
+          "entries": [
+            {"id":"15f371e5-0","kind":"token","change":"updated","class":"api","bump":"patch","indirect":false,"contexts":["Disabled icon"],"record":"9b799da8-2130-417e-b7ee-5e1154a89837","name":"color[colorFamily=white]","fields":[{"path":"lifecycle.deprecatedIn","after":"15.6.0"},{"path":"lifecycle.replacedBy","after":"2b2717e1-3479-4dab-9609-0d694993a1af"}]},
+            {"id":"15f371e5-1","kind":"token","change":"updated","class":"documentation","bump":"patch","indirect":false,"contexts":["Disabled icon"],"record":"9b799da8-2130-417e-b7ee-5e1154a89837","name":"color[colorFamily=white]","fields":[{"path":"lifecycle.deprecatedComment","after":"Replaced with transparent-static-white-1000"}]}
+          ]
+        }
+      ]
+    },
+    {
+      "release": "3.8.0",
+      "version": "1.0.5",
+      "bump": "patch",
+      "date": "2026-11-03",
+      "commit": "7b38617df24442d22724fb890cef69aa198b9e3a",
+      "commits": [
+        {
+          "commit": "9b4ad35c29fb00193e5847625699afb04fa0c560",
+          "date": "2026-10-31",
+          "source": {"type":"pr","repo":"adobe/spectrum-design-data","number":1582,"title":"feat: component visual recipes, renderer, explorer site and platform-aware rendering","url":"https://github.com/adobe/spectrum-design-data/pull/1582"},
+          "entries": [
+            {"id":"9b4ad35c-0","kind":"token","change":"renamed","class":"api","bump":"patch","indirect":false,"contexts":["Focus ring"],"record":"fb035d45-e63b-4cd4-b220-675a52e99399","name":"gap[anatomy=focus-indicator,legacyKey=focus-ring-gap]","fields":[{"path":"name.anatomy","before":"focus-ring","after":"focus-indicator"},{"path":"name.legacyKey","after":"focus-ring-gap"}]}
+          ]
+        }
+      ]
+    },
+    {
+      "release": "3.11.0",
+      "version": "1.0.6",
+      "bump": "patch",
+      "date": "2026-11-11",
+      "commit": "43850b0c1cdd7eef736289cd6f3febc73afe4cb8",
+      "commits": [
+        {
+          "commit": "e0df9f51102037f1d0799bf8083de923e00795cd",
+          "date": "2026-11-10",
+          "source": {"type":"pr","repo":"adobe/spectrum-design-data","number":1719,"title":"feat(design-data): set replacedBy on workflow-icon-size tokens and repoint relationships","url":"https://github.com/adobe/spectrum-design-data/pull/1719"},
+          "entries": [
+            {"id":"e0df9f51-0","kind":"token","change":"updated","class":"api","bump":"patch","indirect":false,"contexts":["Disabled icon asset"],"record":"40abc60f-ab65-41ef-b724-a0f0bdd94d14","name":"workflow-icon-size-100[scale=desktop]","fields":[{"path":"lifecycle.replacedBy","after":"54a8eb69-a730-4871-b1eb-2958a2d9a8c5"}]},
+            {"id":"e0df9f51-1","kind":"token","change":"updated","class":"documentation","bump":"patch","indirect":false,"contexts":["Disabled icon asset"],"record":"40abc60f-ab65-41ef-b724-a0f0bdd94d14","name":"workflow-icon-size-100[scale=desktop]","fields":[{"path":"lifecycle.deprecatedComment","after":"Use workflow-icon-medium instead. The desktop size changes from 20px to 18px (mobile is unchanged)."}]},
+            {"id":"e0df9f51-2","kind":"token","change":"updated","class":"api","bump":"patch","indirect":false,"contexts":["Disabled icon asset"],"record":"9e882a20-b8e1-4e9b-89f9-26f21db3cd78","name":"workflow-icon-size-100[scale=mobile]","fields":[{"path":"lifecycle.replacedBy","after":"f272e08b-f6e6-4681-8dc0-abe071b8977a"}]},
+            {"id":"e0df9f51-3","kind":"token","change":"updated","class":"documentation","bump":"patch","indirect":false,"contexts":["Disabled icon asset"],"record":"9e882a20-b8e1-4e9b-89f9-26f21db3cd78","name":"workflow-icon-size-100[scale=mobile]","fields":[{"path":"lifecycle.deprecatedComment","after":"Use workflow-icon-medium instead. The desktop size changes from 20px to 18px (mobile is unchanged)."}]},
+            {"id":"e0df9f51-4","kind":"token","change":"updated","class":"api","bump":"patch","indirect":false,"contexts":["Disabled icon asset"],"record":"6392e605-932e-456d-be53-149b624a04e2","name":"workflow-icon-size-200[scale=desktop]","fields":[{"path":"lifecycle.replacedBy","after":"dc8b54c5-d70c-46ff-838f-9e64e1877cc0"}]},
+            {"id":"e0df9f51-5","kind":"token","change":"updated","class":"documentation","bump":"patch","indirect":false,"contexts":["Disabled icon asset"],"record":"6392e605-932e-456d-be53-149b624a04e2","name":"workflow-icon-size-200[scale=desktop]","fields":[{"path":"lifecycle.deprecatedComment","after":"Use workflow-icon-large instead. The desktop size changes from 22px to 20px (mobile is unchanged)."}]},
+            {"id":"e0df9f51-6","kind":"token","change":"updated","class":"api","bump":"patch","indirect":false,"contexts":["Disabled icon asset"],"record":"9948e083-8c75-48f7-8e58-32c75ec76116","name":"workflow-icon-size-200[scale=mobile]","fields":[{"path":"lifecycle.replacedBy","after":"94f62adc-c5fb-48f8-ba05-7c639b936643"}]},
+            {"id":"e0df9f51-7","kind":"token","change":"updated","class":"documentation","bump":"patch","indirect":false,"contexts":["Disabled icon asset"],"record":"9948e083-8c75-48f7-8e58-32c75ec76116","name":"workflow-icon-size-200[scale=mobile]","fields":[{"path":"lifecycle.deprecatedComment","after":"Use workflow-icon-large instead. The desktop size changes from 22px to 20px (mobile is unchanged)."}]},
+            {"id":"e0df9f51-8","kind":"token","change":"updated","class":"api","bump":"patch","indirect":false,"contexts":["Disabled icon asset"],"record":"1423caf1-75ca-4ca8-aa6a-22dcf3655b0e","name":"workflow-icon-size-50[scale=desktop]","fields":[{"path":"lifecycle.replacedBy","after":"986ccd9d-7310-43c6-b5a2-ad5a9a7e7275"}]},
+            {"id":"e0df9f51-9","kind":"token","change":"updated","class":"documentation","bump":"patch","indirect":false,"contexts":["Disabled icon asset"],"record":"1423caf1-75ca-4ca8-aa6a-22dcf3655b0e","name":"workflow-icon-size-50[scale=desktop]","fields":[{"path":"lifecycle.deprecatedComment","after":"Use workflow-icon-extra-small instead"}]},
+            {"id":"e0df9f51-10","kind":"token","change":"updated","class":"api","bump":"patch","indirect":false,"contexts":["Disabled icon asset"],"record":"4c4cb541-7d42-4bb4-9c86-7197c4600896","name":"workflow-icon-size-50[scale=mobile]","fields":[{"path":"lifecycle.replacedBy","after":"9b324b14-b1cf-4932-b5a7-fd5b9410b71b"}]},
+            {"id":"e0df9f51-11","kind":"token","change":"updated","class":"documentation","bump":"patch","indirect":false,"contexts":["Disabled icon asset"],"record":"4c4cb541-7d42-4bb4-9c86-7197c4600896","name":"workflow-icon-size-50[scale=mobile]","fields":[{"path":"lifecycle.deprecatedComment","after":"Use workflow-icon-extra-small instead"}]},
+            {"id":"e0df9f51-12","kind":"token","change":"updated","class":"api","bump":"patch","indirect":false,"contexts":["Disabled icon asset"],"record":"85cdef34-0682-45eb-ac06-98c76883cdf7","name":"workflow-icon-size-75[scale=desktop]","fields":[{"path":"lifecycle.replacedBy","after":"f7d9ca4c-6d3f-4053-962a-152a19531389"}]},
+            {"id":"e0df9f51-13","kind":"token","change":"updated","class":"documentation","bump":"patch","indirect":false,"contexts":["Disabled icon asset"],"record":"85cdef34-0682-45eb-ac06-98c76883cdf7","name":"workflow-icon-size-75[scale=desktop]","fields":[{"path":"lifecycle.deprecatedComment","after":"Use workflow-icon-small instead"}]},
+            {"id":"e0df9f51-14","kind":"token","change":"updated","class":"api","bump":"patch","indirect":false,"contexts":["Disabled icon asset"],"record":"b720c214-babe-426d-9629-9ec60d5e8622","name":"workflow-icon-size-75[scale=mobile]","fields":[{"path":"lifecycle.replacedBy","after":"a659c66d-1e77-4818-95ea-501e65162841"}]},
+            {"id":"e0df9f51-15","kind":"token","change":"updated","class":"documentation","bump":"patch","indirect":false,"contexts":["Disabled icon asset"],"record":"b720c214-babe-426d-9629-9ec60d5e8622","name":"workflow-icon-size-75[scale=mobile]","fields":[{"path":"lifecycle.deprecatedComment","after":"Use workflow-icon-small instead"}]},
+            {"id":"e0df9f51-16","kind":"relationship","change":"updated","class":"visual","bump":"patch","indirect":false,"contexts":["Disabled icon asset"],"scope":{"property":"workflow-icon-size-50","options":null},"record":"b845116a-9e69-5fe6-97e8-cd3cbba05541","name":"workflow-icon-size-50","fields":[{"path":"$ref","before":"1423caf1-75ca-4ca8-aa6a-22dcf3655b0e","after":"986ccd9d-7310-43c6-b5a2-ad5a9a7e7275"}]},
+            {"id":"e0df9f51-17","kind":"relationship","change":"updated","class":"visual","bump":"patch","indirect":false,"contexts":["Disabled icon asset"],"scope":{"property":"workflow-icon-size-50","options":null},"record":"6725b47b-3422-5afe-97d7-737f6c368a25","name":"workflow-icon-size-50","fields":[{"path":"$ref","before":"4c4cb541-7d42-4bb4-9c86-7197c4600896","after":"9b324b14-b1cf-4932-b5a7-fd5b9410b71b"}]},
+            {"id":"e0df9f51-18","kind":"relationship","change":"updated","class":"visual","bump":"patch","indirect":false,"contexts":["Disabled icon asset"],"scope":{"property":"workflow-icon-size-75","options":null},"record":"39e65701-6f1d-5311-bf21-a7fbc47d1c95","name":"workflow-icon-size-75","fields":[{"path":"$ref","before":"85cdef34-0682-45eb-ac06-98c76883cdf7","after":"f7d9ca4c-6d3f-4053-962a-152a19531389"}]},
+            {"id":"e0df9f51-19","kind":"relationship","change":"updated","class":"visual","bump":"patch","indirect":false,"contexts":["Disabled icon asset"],"scope":{"property":"workflow-icon-size-75","options":null},"record":"fba5a581-11af-513b-8d30-bfc15597fe11","name":"workflow-icon-size-75","fields":[{"path":"$ref","before":"b720c214-babe-426d-9629-9ec60d5e8622","after":"a659c66d-1e77-4818-95ea-501e65162841"}]},
+            {"id":"e0df9f51-20","kind":"relationship","change":"updated","class":"visual","bump":"patch","indirect":false,"contexts":["Disabled icon asset"],"scope":{"property":"workflow-icon-size-100","options":null},"record":"67af0a7a-cfee-5083-bfa4-5a044a7cff9a","name":"workflow-icon-size-100","fields":[{"path":"$ref","before":"40abc60f-ab65-41ef-b724-a0f0bdd94d14","after":"54a8eb69-a730-4871-b1eb-2958a2d9a8c5"}]},
+            {"id":"e0df9f51-21","kind":"relationship","change":"updated","class":"visual","bump":"patch","indirect":false,"contexts":["Disabled icon asset"],"scope":{"property":"workflow-icon-size-100","options":null},"record":"38dd6fde-7b0e-5d53-b5e8-b4c6823c6fc6","name":"workflow-icon-size-100","fields":[{"path":"$ref","before":"9e882a20-b8e1-4e9b-89f9-26f21db3cd78","after":"f272e08b-f6e6-4681-8dc0-abe071b8977a"}]},
+            {"id":"e0df9f51-22","kind":"relationship","change":"updated","class":"visual","bump":"patch","indirect":false,"contexts":["Disabled icon asset"],"scope":{"property":"workflow-icon-size-200","options":null},"record":"1f71182c-e889-535a-8fc1-d2040986c767","name":"workflow-icon-size-200","fields":[{"path":"$ref","before":"6392e605-932e-456d-be53-149b624a04e2","after":"dc8b54c5-d70c-46ff-838f-9e64e1877cc0"}]},
+            {"id":"e0df9f51-23","kind":"relationship","change":"updated","class":"visual","bump":"patch","indirect":false,"contexts":["Disabled icon asset"],"scope":{"property":"workflow-icon-size-200","options":null},"record":"0810631e-3eef-5ef9-8ffd-4f2edd0ee230","name":"workflow-icon-size-200","fields":[{"path":"$ref","before":"9948e083-8c75-48f7-8e58-32c75ec76116","after":"94f62adc-c5fb-48f8-ba05-7c639b936643"}]}
+          ]
+        }
+      ]
+    }
+  ]
+}

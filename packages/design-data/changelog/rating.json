@@ -1,0 +1,108 @@
+{
+  "$schema": "https://opensource.adobe.com/spectrum-design-data/schemas/v0/component-changelog.schema.json",
+  "specVersion": "1.0.0-draft",
+  "component": "rating",
+  "baseline": {"release":"2.1.0","version":"1.0.0","commit":"4033f09de6696d4f61d1da89d42129a941dbd806"},
+  "releases": [
+    {
+      "release": "2.7.0",
+      "version": "1.0.1",
+      "bump": "patch",
+      "date": "2026-09-03",
+      "commit": "5e22a7a18cd1a4f2a5957cba9cafa66bef73ed63",
+      "commits": [
+        {
+          "commit": "5e22a7a18cd1a4f2a5957cba9cafa66bef73ed63",
+          "date": "2026-09-03",
+          "source": {"type":"pr","repo":"adobe/spectrum-design-data","number":1394,"title":"fix(design-data): re-point CTR refs off deprecated tokens, add guard rail","url":"https://github.com/adobe/spectrum-design-data/pull/1394"},
+          "entries": [
+            {"id":"5e22a7a1-0","kind":"relationship","change":"updated","class":"visual","bump":"patch","indirect":false,"contexts":["Focus ring"],"scope":{"property":"gap","options":null},"record":"gap#Focus ring","name":"gap","fields":[{"path":"$ref","before":"693651ef-71c7-4096-91a5-1c84cb861021","after":"fb035d45-e63b-4cd4-b220-675a52e99399"}]},
+            {"id":"5e22a7a1-1","kind":"relationship","change":"updated","class":"visual","bump":"patch","indirect":false,"contexts":["Spacing (padding)"],"scope":{"property":"space-between","options":null},"record":"space-between#Spacing (padding)","name":"space-between","fields":[{"path":"$ref","before":"8cf415d3-57f2-41c6-a175-40c75b58a79e","after":"80b4ea6a-2f97-4d23-9256-61e30ed07f4d"}]},
+            {"id":"5e22a7a1-2","kind":"relationship","change":"updated","class":"visual","bump":"patch","indirect":false,"contexts":["Spacing (padding)"],"scope":{"property":"space-between","options":null},"record":"space-between#Spacing (padding)","name":"space-between","fields":[{"path":"$ref","before":"6b99f788-336d-4159-819e-29050f8b571a","after":"5741f832-f012-45bc-9e87-6e07ab2cb87f"}]},
+            {"id":"5e22a7a1-3","kind":"relationship","change":"updated","class":"visual","bump":"patch","indirect":false,"contexts":["Spacing (padding)"],"scope":{"property":"space-between","options":null},"record":"space-between#Spacing (padding)","name":"space-between","fields":[{"path":"$ref","before":"360ab235-93bf-482c-9ff1-387d69f018e1","after":"80b4ea6a-2f97-4d23-9256-61e30ed07f4d"}]},
+            {"id":"5e22a7a1-4","kind":"relationship","change":"updated","class":"visual","bump":"patch","indirect":false,"contexts":["Spacing (padding)"],"scope":{"property":"space-between","options":null},"record":"space-between#Spacing (padding)","name":"space-between","fields":[{"path":"$ref","before":"897117a7-4e29-4fc2-85b4-1b2aa882ff7b","after":"5741f832-f012-45bc-9e87-6e07ab2cb87f"}]},
+            {"id":"5e22a7a1-5","kind":"relationship","change":"updated","class":"visual","bump":"patch","indirect":false,"contexts":["Spacing (padding)"],"scope":{"property":"space-between","options":null},"record":"space-between#Spacing (padding)","name":"space-between","fields":[{"path":"$ref","before":"a2ad2062-a115-4abb-859b-f9d307b44744","after":"80b4ea6a-2f97-4d23-9256-61e30ed07f4d"}]},
+            {"id":"5e22a7a1-6","kind":"relationship","change":"updated","class":"visual","bump":"patch","indirect":false,"contexts":["Spacing (padding)"],"scope":{"property":"space-between","options":null},"record":"space-between#Spacing (padding)","name":"space-between","fields":[{"path":"$ref","before":"888c8501-b709-4b72-9d19-504e3b0befb4","after":"5741f832-f012-45bc-9e87-6e07ab2cb87f"}]}
+          ]
+        }
+      ]
+    },
+    {
+      "release": "3.0.0",
+      "version": "1.0.2",
+      "bump": "patch",
+      "date": "2026-09-08",
+      "commit": "569b7abcb96ebeaa549c1c1a1cb44975b30bff59",
+      "commits": [
+        {
+          "commit": "6005339a0678226eee3e827fd5bbfa793f5bccc7",
+          "date": "2026-09-08",
+          "source": {"type":"pr","repo":"adobe/spectrum-design-data","number":1428,"title":"feat(tokens)!: add conceptId as canonical concept-level UUID, retire set_uuid","url":"https://github.com/adobe/spectrum-design-data/pull/1428"},
+          "entries": [],
+          "metadata": {"count":18,"fields":["conceptId","set_uuid"]}
+        }
+      ]
+    },
+    {
+      "release": "3.8.0",
+      "version": "1.0.3",
+      "bump": "patch",
+      "date": "2026-11-03",
+      "commit": "7b38617df24442d22724fb890cef69aa198b9e3a",
+      "commits": [
+        {
+          "commit": "9b4ad35c29fb00193e5847625699afb04fa0c560",
+          "date": "2026-10-31",
+          "source": {"type":"pr","repo":"adobe/spectrum-design-data","number":1582,"title":"feat: component visual recipes, renderer, explorer site and platform-aware rendering","url":"https://github.com/adobe/spectrum-design-data/pull/1582"},
+          "entries": [
+            {"id":"9b4ad35c-0","kind":"token","change":"renamed","class":"api","bump":"patch","indirect":false,"contexts":["Focus ring"],"record":"fb035d45-e63b-4cd4-b220-675a52e99399","name":"gap[anatomy=focus-indicator,legacyKey=focus-ring-gap]","fields":[{"path":"name.anatomy","before":"focus-ring","after":"focus-indicator"},{"path":"name.legacyKey","after":"focus-ring-gap"}]}
+          ]
+        }
+      ]
+    },
+    {
+      "release": "3.9.1",
+      "version": "1.0.4",
+      "bump": "patch",
+      "date": "2026-11-06",
+      "commit": "c2236288e5cfa47bfe9f4099abb24d03f7c10acf",
+      "commits": [
+        {
+          "commit": "c2236288e5cfa47bfe9f4099abb24d03f7c10acf",
+          "date": "2026-11-06",
+          "source": {"type":"pr","repo":"adobe/spectrum-design-data","number":1678,"title":"fix(design-data): remove duplicate relationship records, resolve setUuid refs in spec sheets","url":"https://github.com/adobe/spectrum-design-data/pull/1678"},
+          "entries": [],
+          "metadata": {"count":4,"fields":["relationship removed"]}
+        }
+      ]
+    },
+    {
+      "release": "3.11.0",
+      "version": "1.0.5",
+      "bump": "patch",
+      "date": "2026-11-11",
+      "commit": "43850b0c1cdd7eef736289cd6f3febc73afe4cb8",
+      "commits": [
+        {
+          "commit": "e0df9f51102037f1d0799bf8083de923e00795cd",
+          "date": "2026-11-10",
+          "source": {"type":"pr","repo":"adobe/spectrum-design-data","number":1719,"title":"feat(design-data): set replacedBy on workflow-icon-size tokens and repoint relationships","url":"https://github.com/adobe/spectrum-design-data/pull/1719"},
+          "entries": [
+            {"id":"e0df9f51-0","kind":"token","change":"updated","class":"api","bump":"patch","indirect":false,"contexts":["Layout"],"record":"40abc60f-ab65-41ef-b724-a0f0bdd94d14","name":"workflow-icon-size-100[scale=desktop]","fields":[{"path":"lifecycle.replacedBy","after":"54a8eb69-a730-4871-b1eb-2958a2d9a8c5"}]},
+            {"id":"e0df9f51-1","kind":"token","change":"updated","class":"documentation","bump":"patch","indirect":false,"contexts":["Layout"],"record":"40abc60f-ab65-41ef-b724-a0f0bdd94d14","name":"workflow-icon-size-100[scale=desktop]","fields":[{"path":"lifecycle.deprecatedComment","after":"Use workflow-icon-medium instead. The desktop size changes from 20px to 18px (mobile is unchanged)."}]},
+            {"id":"e0df9f51-2","kind":"token","change":"updated","class":"api","bump":"patch","indirect":false,"contexts":["Layout"],"record":"9e882a20-b8e1-4e9b-89f9-26f21db3cd78","name":"workflow-icon-size-100[scale=mobile]","fields":[{"path":"lifecycle.replacedBy","after":"f272e08b-f6e6-4681-8dc0-abe071b8977a"}]},
+            {"id":"e0df9f51-3","kind":"token","change":"updated","class":"documentation","bump":"patch","indirect":false,"contexts":["Layout"],"record":"9e882a20-b8e1-4e9b-89f9-26f21db3cd78","name":"workflow-icon-size-100[scale=mobile]","fields":[{"path":"lifecycle.deprecatedComment","after":"Use workflow-icon-medium instead. The desktop size changes from 20px to 18px (mobile is unchanged)."}]},
+            {"id":"e0df9f51-4","kind":"token","change":"updated","class":"api","bump":"patch","indirect":false,"contexts":["Layout"],"record":"85cdef34-0682-45eb-ac06-98c76883cdf7","name":"workflow-icon-size-75[scale=desktop]","fields":[{"path":"lifecycle.replacedBy","after":"f7d9ca4c-6d3f-4053-962a-152a19531389"}]},
+            {"id":"e0df9f51-5","kind":"token","change":"updated","class":"documentation","bump":"patch","indirect":false,"contexts":["Layout"],"record":"85cdef34-0682-45eb-ac06-98c76883cdf7","name":"workflow-icon-size-75[scale=desktop]","fields":[{"path":"lifecycle.deprecatedComment","after":"Use workflow-icon-small instead"}]},
+            {"id":"e0df9f51-6","kind":"token","change":"updated","class":"api","bump":"patch","indirect":false,"contexts":["Layout"],"record":"b720c214-babe-426d-9629-9ec60d5e8622","name":"workflow-icon-size-75[scale=mobile]","fields":[{"path":"lifecycle.replacedBy","after":"a659c66d-1e77-4818-95ea-501e65162841"}]},
+            {"id":"e0df9f51-7","kind":"token","change":"updated","class":"documentation","bump":"patch","indirect":false,"contexts":["Layout"],"record":"b720c214-babe-426d-9629-9ec60d5e8622","name":"workflow-icon-size-75[scale=mobile]","fields":[{"path":"lifecycle.deprecatedComment","after":"Use workflow-icon-small instead"}]},
+            {"id":"e0df9f51-8","kind":"relationship","change":"updated","class":"visual","bump":"patch","indirect":false,"contexts":["Layout"],"scope":{"property":"workflow-icon-size-75","options":null},"record":"d1f97ecd-e7ad-538a-bb67-406456499ac2","name":"workflow-icon-size-75","fields":[{"path":"$ref","before":"85cdef34-0682-45eb-ac06-98c76883cdf7","after":"f7d9ca4c-6d3f-4053-962a-152a19531389"}]},
+            {"id":"e0df9f51-9","kind":"relationship","change":"updated","class":"visual","bump":"patch","indirect":false,"contexts":["Layout"],"scope":{"property":"workflow-icon-size-75","options":null},"record":"6c1bc549-4a67-5c2d-9bf8-385085d390b1","name":"workflow-icon-size-75","fields":[{"path":"$ref","before":"b720c214-babe-426d-9629-9ec60d5e8622","after":"a659c66d-1e77-4818-95ea-501e65162841"}]},
+            {"id":"e0df9f51-10","kind":"relationship","change":"updated","class":"visual","bump":"patch","indirect":false,"contexts":["Layout"],"scope":{"property":"workflow-icon-size-100","options":null},"record":"bb3c8cd0-60e0-53aa-9569-d1096919fc52","name":"workflow-icon-size-100","fields":[{"path":"$ref","before":"40abc60f-ab65-41ef-b724-a0f0bdd94d14","after":"54a8eb69-a730-4871-b1eb-2958a2d9a8c5"}]},
+            {"id":"e0df9f51-11","kind":"relationship","change":"updated","class":"visual","bump":"patch","indirect":false,"contexts":["Layout"],"scope":{"property":"workflow-icon-size-100","options":null},"record":"1ea942fb-8269-523b-ba21-b086c0800c83","name":"workflow-icon-size-100","fields":[{"path":"$ref","before":"9e882a20-b8e1-4e9b-89f9-26f21db3cd78","after":"f272e08b-f6e6-4681-8dc0-abe071b8977a"}]}
+          ]
+        }
+      ]
+    }
+  ]
+}
